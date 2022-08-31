@@ -47,12 +47,10 @@ module.exports.registerUser = async (req, res, next) => {
             return res.status(501).send(err);
           });
       } else {
-        return res
-          .status(501)
-          .json({
-            message:
-              "Password must have minimum 8 characters with at least one special character, one lowercase character and one uppercase character.",
-          });
+        return res.status(501).json({
+          message:
+            "Password must have minimum 8 characters with at least one special character, one lowercase character and one uppercase character.",
+        });
       }
     } else {
       return res
@@ -71,7 +69,7 @@ module.exports.loginUser = async (req, res, next) => {
   }
   let user = await User.findOne({ email });
   if (!user) {
-    return res.status(501).json({ error: "" });
+    return res.status(501).json({message: "User not found" });
   } else {
     if (user.role === role) {
       await bcrypt
