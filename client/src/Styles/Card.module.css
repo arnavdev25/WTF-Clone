@@ -1,0 +1,45 @@
+.box {
+    width: 70%;
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20%;
+}
+
+.plans>div {
+    background-color: rgb(147, 35, 35);
+    border: 1px solid #fff;
+    padding: 20px;
+}
+
+.plans>div>div {
+    background-color: rgb(147, 35, 35);
+
+}
+
+.plans p {
+    background-color: transparent;
+}
+
+.plans img {
+    background-color: transparent;
+}
+
+.plans button {
+    background-color: blueviolet;
+    padding: 5px 10px;
+}
+
+.ben {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ben>div {
+    border: 1px solid #fff;
+    padding: 30px;
+}

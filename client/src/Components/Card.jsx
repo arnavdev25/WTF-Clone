@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import LOGO from "../assets/logo1.png";
+import LOGO from "../assets/logo.PNG";
+import style from "../Styles/Card.module.css";
 const Card = () => {
   const { user_id } = useParams();
   const [plans, setPlans] = useState([]);
@@ -25,25 +26,31 @@ const Card = () => {
         color: "",
         margin: "100px",
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
+        width: "90%",
       }}
     >
-      <div>
+      <div className={style.box}>
         <div>
           <h2>Description</h2>
           <p>{d.description}</p>
         </div>
-        <div>
-          <h2>Facilities</h2>
-          {ben.map((e) => (
-            <div>{e.name}</div>
+        <h2>Facilities</h2>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          {ben.map((e,i) => (
+            <div key={i} style={{ background: "#333", padding: "10px" }}>{e.name}</div>
           ))}
         </div>
         <div>
           <h2>Why to choose WTF?</h2>
-          <div>
+          <div className={style.ben}>
             {terms.map((e, i) => (
-              <div>
+              <div key={i}>
                 <img sec={e.icon} alt="icon" />
                 <p>{e.name}</p>
               </div>
@@ -51,7 +58,7 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={style.plans}>
         {plans.map((e, i) => (
           <div key={i}>
             <div>

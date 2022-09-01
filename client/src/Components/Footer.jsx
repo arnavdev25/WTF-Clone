@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "../Styles/Footer.module.css";
 import LOGO from "../assets/logo.PNG";
-import instagram from "../assets/insta_icon_1.PNG";
-import insta from "../assets/insta_icon_2.png";
-import facebook from "../assets/fb_icon_1.png";
-import fabo from "../assets/fb_icon_2.png";
-import linkedin from "../assets/li_icon_1.png";
-import Lnkd from "../assets/li_icon_2.png";
+import instagram from "../assets/instagram.PNG";
+import insta from "../assets/insta.png";
+import facebook from "../assets/facebook.png";
+import fabo from "../assets/fabo.png";
+import linkedin from "../assets/linkedin.png";
+import Lnkd from "../assets/lnkd.png";
 import { MdCall, MdLocationOn, MdMail } from "react-icons/md";
 
 const Footer = () => {
