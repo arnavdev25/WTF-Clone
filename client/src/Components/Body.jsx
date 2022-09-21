@@ -19,7 +19,6 @@ const Body = () => {
       )
       .then(({ data }) => {
         setLoading(false);
-        // console.log(data);
         localStorage.setItem("data", JSON.stringify(data));
         setData(data.data);
       })
@@ -28,7 +27,6 @@ const Body = () => {
         setErr(true);
       });
   }, [filt]);
-
   useEffect(() => {
     axios
       .get(`https://devapi.wtfup.me/gym/places`)
@@ -43,22 +41,21 @@ const Body = () => {
         <>Something Went Wrong...</>
       ) : (
         <div>
-          <div className={styles.inputbox}>
+          <div className={styles.input}>
             <MdSearch fontSize={25} />
             <input
               placeholder="Search gym name here..."
               onChange={(e) => setText(e.target.value)}
               value={text}
             />
-            <button className={styles.searchbtn1}>
+            <button className={styles.btn1}>
               <MdLocationOn fontSize={25} />
             </button>
-            <button className={styles.searchbtn2} onClick={() => setText("")}>
+            <button className={styles.btn2} onClick={() => setText("")}>
               Clear
             </button>
           </div>
-
-          <div className={styles.gymsbox}>
+          <div className={styles.box}>
             <div>
               <p className={styles.head1}>Filters</p>
               <p className={styles.head2}>Cities</p>
@@ -69,14 +66,14 @@ const Body = () => {
                 })}
               </select>
             </div>
-            <div className={styles.gymcon}>
+            <div className={styles.con}>
               {data &&
                 data.map((e, i) => {
                   return (
                     <div
                       key={i}
                       className={styles.gym}
-                      style={{cursor:"pointer"}}
+                      style={{ cursor: "pointer" }}
                       onClick={() => {
                         localStorage.setItem("fac", JSON.stringify(e));
                         navigate(`/${e.user_id}`);
@@ -100,5 +97,4 @@ const Body = () => {
     </>
   );
 };
-
 export default Body;

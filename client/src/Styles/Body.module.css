@@ -1,4 +1,22 @@
-.inputbox {
+.con {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.con>.gym {
+    padding: 20px;
+    display: flex;
+    width: 1025px;
+    height: 300px;
+    border-radius: 15px;
+    background: rgb(46, 46, 46);
+    background: linear-gradient(90deg, rgba(46, 46, 46, 1) 41%, rgba(13, 13, 13, 1) 100%);
+}
+
+.input {
     margin: 50px auto;
     width: 85%;
     padding: 8px 15px;
@@ -6,62 +24,15 @@
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
-.inputbox>input {
+.input>input {
     width: 930px;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 18px;
-}
-
-.inputbox>input::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    font-size: 18px;
-    color: #ABA7A7
-}
-
-.inputbox>input:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    font-size: 18px;
-    color: #ABA7A7
-}
-
-.inputbox>input::-ms-input-placeholder {
-    /* Microsoft Edge */
-    font-size: 18px;
-    color: #ABA7A7
-}
-
-.searchbtn1 {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 12px;
-    background: #920909;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
-    font-weight: 400;
-    border: none;
-}
-
-.searchbtn2 {
-    height: 40px;
-    padding: 7px 20px;
-    background: #920909;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
-    font-weight: 400;
-    border: none;
 }
 
 .bookbtn {
@@ -77,15 +48,16 @@
     border: none;
 }
 
-.gymsbox {
+.box {
     margin: auto;
-    width: 93%;
+    width: 94%;
+    height: 100vh;
     display: flex;
     gap: 40px;
-    justify-content: space-around;
+    margin-bottom: 80px;
 }
 
-.gymsbox>div:first-child {
+.box>div:first-child {
     text-align: start;
 }
 
@@ -98,39 +70,20 @@
     font-size: 25px;
 }
 
-.gymsbox>div:first-child>select {
+.box>div:first-child>select {
     padding: 10px 10px;
     font-size: 18px;
     margin-top: 20px;
-    width: 300px;
+    width: 200px;
     background-color: #2E2E2E;
     border: 2px solid #ABA7A7;
     border-radius: 5px;
-
 }
 
-.gymsbox>div:first-child>select>option {
-
+.box>div:first-child>select>option {
     font-size: 18px;
-    width: 300px;
+    width: 200px;
     background-color: #2E2E2E;
-}
-
-.gymcon {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.gymcon>.gym {
-    padding: 20px;
-    display: flex;
-    width: 120%;
-    height: 300px;
-    text-align: center;
-    border-radius: 15px;
-    background: rgb(46, 46, 46);
-    background: linear-gradient(90deg, rgba(46, 46, 46, 1) 41%, rgba(13, 13, 13, 1) 100%);
 }
 
 .gym>.empty {
@@ -138,8 +91,85 @@
 }
 
 .gym>.detail {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
+    gap: 10px;
+    text-align: start;
+}
+
+.detail>p:nth-child(2) {
+    font-size: 25px;
+}
+
+.detail>div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 70px;
+}
+
+.detail>div:nth-child(5) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn1 {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    background: #920909;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: 400;
+    border: none;
+}
+
+.btn2 {
+    height: 40px;
+    padding: 7px 20px;
+    background: #920909;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: 400;
+    border: none;
+}
+
+.con::-webkit-scrollbar {
+    width: 9px;
+
+}
+
+.con::-webkit-scrollbar-track {
+    display: none;
+}
+
+.con::-webkit-scrollbar-thumb {
+    background: #FF002E;
+    border-radius: 10px;
+}
+
+.inputbox>input::placeholder {
+    font-size: 18px;
+    color: #ABA7A7
+}
+
+.inputbox>input:-ms-input-placeholder {
+    font-size: 18px;
+    color: #ABA7A7
+}
+
+.inputbox>input::-ms-input-placeholder {
+    font-size: 18px;
+    color: #ABA7A7
 }

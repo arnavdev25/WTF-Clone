@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../Styles/Navbar.module.css";
 import LOGO from "../assets/logoo.png";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -19,19 +18,19 @@ const Navbar = () => {
   return (
     <div id={styles.position}>
       <div className={navbar ? styles.nav : styles.nav1}>
-        <div className={styles.container}>
+        <div className={styles.box}>
           <div className={styles.logo}>
             <img src={LOGO} alt="Logo" />
           </div>
           <div className={styles.columns}>
             <Link className={styles.navbtns} to="/gyms">
-              <p>Fitness</p>{" "}
+              <p>Fitness</p>
             </Link>
             <Link className={styles.navbtns} to="/gyms">
-              <p>Nutrition</p>{" "}
+              <p>Nutrition</p>
             </Link>
             <Link className={styles.navbtns} to="/gyms">
-              <p>Gyms</p>{" "}
+              <p>Gyms</p>
             </Link>
             <Link className={styles.navbtns} to="/gyms">
               <p>Become WTF Partner</p>

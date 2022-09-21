@@ -8,7 +8,6 @@ import fabo from "../assets/fabo.png";
 import linkedin from "../assets/linkedin.png";
 import Lnkd from "../assets/lnkd.png";
 import { MdCall, MdLocationOn, MdMail } from "react-icons/md";
-
 const Footer = () => {
   const [isShown, setIsShown] = useState({
     instagram: false,
@@ -17,11 +16,11 @@ const Footer = () => {
   });
   return (
     <footer>
-      <div className={styles.container}>
+      <div className={styles.footer}>
         <div className={styles.columns}>
-          <div className={styles.branding}>
+          <div className={styles.brand}>
             <img src={LOGO} alt="Logo" />
-            <div className={styles.soicons}>
+            <div className={styles.social}>
               <div>
                 <img
                   onMouseEnter={() =>
@@ -115,7 +114,6 @@ const Footer = () => {
             <div>
               <MdLocationOn size={25} />
             </div>
-
             <h4>
               Ho: C-86 B, Ground Floor, Sector 8, Noida, Uttar Pradesh, India{" "}
             </h4>
@@ -123,8 +121,7 @@ const Footer = () => {
           <div>
             <div>
               <MdCall size={25} />
-            </div>
-
+            </div>{" "}
             <h4>+919090639005</h4>
           </div>
           <div>
@@ -138,5 +135,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

@@ -1,6 +1,5 @@
 import React from "react";
 import BannerImage from "../assets/banner.png";
-
 const Banner = () => {
   return (
     <div>
@@ -8,5 +7,4 @@ const Banner = () => {
     </div>
   );
 };
-
 export default Banner;
